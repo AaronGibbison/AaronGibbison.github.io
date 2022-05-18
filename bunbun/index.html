@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bun Bun!</title>
+</head>
+<body>
+  <p id="annoy"></p>
+
+  <script>
+    (() => {
+      console.log("test");
+      const buns = ["Bun", "Bnnuy", "Cutie pie", "Perfect", "Adorableness", "Adorabun"];
+      const insults = ["amazing", "wonderful", "perfect", "cutie"];
+
+      const bunIndex = Math.floor(Math.random() * buns.length);
+      const insultIndex = Math.floor(Math.random() * insults.length);
+
+      document.getElementById("annoy").innerText = `${buns[bunIndex]}, you're ${insults[insultIndex]}. I love you.`;
+    })();
+  </script>
+</body>
+</html>
