@@ -1,5 +1,5 @@
-import { Personal, personal } from "./personal.ts";
-import { Career, ovo, softwire } from "./career.ts";
+import { Personal, personal } from "./details/personal.ts";
+import { Career, ovo, softwire } from "./details/career.ts";
 import type { GeneratedPage } from "../generatedPage.d.ts";
 
 function personalToHtml(personal: Personal) {
