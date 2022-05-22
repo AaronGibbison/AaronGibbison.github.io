@@ -1,10 +1,11 @@
 export type Career = {
   company: string;
   title: string;
-  description?: string;
+  description: string;
   start: Date;
   end?: Date;
   projects: {
+    priority: number;
     label: string;
     skills: string[];
     notables: string[];
@@ -23,6 +24,7 @@ export const softwire: Career = {
   projects: [
     {
       label: "BBC (Support)",
+      priority: 2,
       skills: [
         "Java",
         "Scala",
@@ -42,6 +44,7 @@ export const softwire: Career = {
     },
     {
       label: "BBC (Security)",
+      priority: 1,
       skills: [
         "Node.JS",
         "Javascript",
@@ -60,11 +63,11 @@ export const softwire: Career = {
     },
     {
       label: "Air Charter Service (ACS)",
+      priority: 3,
       skills: ["C# (.NET)", "SQL", "Javascript", "JQuery"],
       notables: [
-        "Development time reduced by 20% by auto generating HTML page with C#",
-        "Designed SQL migration schema of a globally distributed database as part of a large architecture change to " +
-        "the codebase"
+        "Led improvement for handling legal information, reducing risk while simplifying reuse",
+        "Designed SQL migration schema of a globally distributed database",
       ],
     },
   ],
@@ -78,11 +81,14 @@ export const ovo: Career = {
   start: new Date("2020-11-01"),
   projects: [{
     label: "Retention",
+    priority: 1,
     skills: ["Typescript", "React", "React-Native", "AWS"],
     notables: [
-      "Assisted Data Scientists in data analysis, improving contract renewal by 33%",
-      "Designing new feature set and providing feedback on system design to other teams",
-      "Reduced build and testing time by 50% while preventing tests from freezing due to excessive memory usage",
+      "Improved engineering framework while also mentoring personal on both a technical and interpersonal level",
+      "Called upon to help resolve incidents outside my normal domain, permitting release of major features",
+      "Assisted other teams in better understanding their domain and designing their architecture",
+      "Analysed, designed and led feature development which improved contract renewal by 33%",
+      "Reduced build & testing time by 50%, while preventing test freezes due to excessive memory usage",
     ],
   }],
 };

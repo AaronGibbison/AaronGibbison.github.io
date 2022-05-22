@@ -1,9 +1,15 @@
-@media screen {
+/*@media screen {*/
   body {
     display: flex;
     justify-content: center;
+
+    width: 720px;
+    padding: 16px;
+    border: 2px black solid;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
+/*}*/
 
 h1, h2, h3, h4, p {
   margin: 0;
@@ -18,14 +24,9 @@ h3, h4 {
   font-weight: 500;
 }
 
-@media screen {
-  #cv {
-    width: 720px;
-    padding: 16px;
-    border: black 2px double;
-  }
+.personal {
+  margin-bottom: 8px;
 }
-
 
 .career > .heading {
   display: flex;
@@ -36,8 +37,14 @@ h3, h4 {
 .project > .header {
   display: grid;
   grid-template-columns: min-content auto;
+
+  margin-top: 8px
 }
 
 .project > .header > h3, .project > .header > h4 {
-  padding: 4px 32px 4px 0;
+  margin-right: 32px;
+}
+
+.project > .notables {
+  padding-left: 20px;
 }

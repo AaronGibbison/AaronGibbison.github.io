@@ -1,8 +1,12 @@
-@media screen {
-  body {
-    display: flex;
-    justify-content: center;
-  }
+body {
+  display: flex;
+  justify-content: center;
+
+  width: 720px;
+  padding: 16px;
+  border: 2px black solid;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1, h2, h3, h4, p {
@@ -16,14 +20,6 @@ h1, h2 {
 h3, h4 {
   font-size: 1rem;
   font-weight: 500;
-}
-
-@media screen {
-  #cv {
-    width: 720px;
-    padding: 16px;
-    border: black 2px double;
-  }
 }
 
 .personal {
@@ -45,4 +41,8 @@ h3, h4 {
 
 .project > .header > h3, .project > .header > h4 {
   margin-right: 32px;
+}
+
+.project > .notables {
+  padding-left: 20px;
 }

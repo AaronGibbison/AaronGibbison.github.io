@@ -17,7 +17,9 @@ function careerToHtml(career: Career) {
     month: "short",
   });
 
-  const projects = career.projects.map((project) =>
+  const projects = career.projects
+    .sort((a, b) => a.priority - b.priority)
+    .map((project) =>
     `<div class="project" id="${project.label}">
       <div class="header">
         ${
@@ -29,7 +31,7 @@ function careerToHtml(career: Career) {
         <h4 class="tech">Technology:</h4>
         <h4>${project.skills.join(", ")}</h4>
       </div>
-      <ul>
+      <ul class="notables">
         ${project.notables.map((n) => `<li>${n}</li>`).join("\n")}
       </ul>
     </div>`
