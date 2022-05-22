@@ -1,6 +1,8 @@
-body {
-  display: flex;
-  justify-content: center;
+@media screen {
+  body {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 h1, h2, h3, h4, p {
@@ -16,11 +18,14 @@ h3, h4 {
   font-weight: 500;
 }
 
-#cv {
-  width: 720px;
-  padding: 16px;
-  border: black 2px double;
+@media screen {
+  #cv {
+    width: 720px;
+    padding: 16px;
+    border: black 2px double;
+  }
 }
+
 
 .career > .heading {
   display: flex;
