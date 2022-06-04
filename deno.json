@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "thoughts:build": "deno run --allow-write --allow-read src/scripts/build-site-thoughts.tsx"
+  },
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns"
+    ],
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment"
+  }
+}
