@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "cv:build": "deno run --allow-write --allow-read src/scripts/build-site-cv.tsx"
+  },
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns"
+    ],
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "_root": "src/*"
+    }
+  }
+}

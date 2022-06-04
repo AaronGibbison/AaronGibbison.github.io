@@ -1,5 +1,5 @@
-import { generateCv } from "../cv/generate-cv.ts";
-import { buildHtmlFile } from "./template-html.ts";
+import { generateCv } from "../cv/generate-cv.tsx";
+import { buildHtmlFile } from "./template-html.tsx";
 
 const html = buildHtmlFile(generateCv());
 Promise.all([
