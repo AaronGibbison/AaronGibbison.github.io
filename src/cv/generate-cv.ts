@@ -20,14 +20,14 @@ function careerToHtml(career: Career) {
   const projects = career.projects
     .sort((a, b) => a.priority - b.priority)
     .map((project) =>
-    `<div class="project" id="${project.label}">
+      `<div class="project" id="${project.label}">
       <div class="header">
         ${
-      career.projects.length > 1
-        ? (`<h3 class="title">Project:</h3>
+        career.projects.length > 1
+          ? (`<h3 class="title">Project:</h3>
         <h3>${project.label}</h3>`)
-        : ""
-    }    
+          : ""
+      }    
         <h4 class="tech">Technology:</h4>
         <h4>${project.skills.join(", ")}</h4>
       </div>
@@ -35,14 +35,14 @@ function careerToHtml(career: Career) {
         ${project.notables.map((n) => `<li>${n}</li>`).join("\n")}
       </ul>
     </div>`
-  );
+    );
 
   return `<div class="career" id="${career.company}">
   <div class="heading">
     <h2 class="company">${career.company}</h2>
     <p class="role">${career.title}</p>
-    <p class="date">${dateFormat.format(career.start)} - ${career.end ?
-    dateFormat.format(career.end) : "Present"
+    <p class="date">${dateFormat.format(career.start)} - ${
+    career.end ? dateFormat.format(career.end) : "Present"
   }</p>
   </div>
   <p class="description">${career.description}</p>
