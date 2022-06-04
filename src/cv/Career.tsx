@@ -8,7 +8,7 @@ export function Careers({ careers }: { careers: TCareer[] }): Component {
       .map(c => <Career career={c} />);
 
   return (
-    <div className="careers">
+    <div class="careers">
       {careersHtml}
     </div>
   );
@@ -44,19 +44,19 @@ function Career({ career }: { career: TCareer }): Component {
 
 function Project({ isSingleProject, project }: { isSingleProject: boolean, project: TProject }): Component {
   return (
-    <div className="project" id={project.label}>
-      <div className="header">
+    <div class="project" id={project.label}>
+      <div class="header">
         { isSingleProject
           ? ""
           : <>
-              <h3 className="title">Project:</h3>
+              <h3 class="title">Project:</h3>
               <h3>{project.label}</h3>
             </>
         }
-        <h4 className="tech">Technology:</h4>
+        <h4 class="tech">Technology:</h4>
         <h4>{project.skills.join(", ")}</h4>
       </div>
-      <ul className="notables">
+      <ul class="notables">
         {project.notables.map(n => <li>{n}</li>)}
       </ul>
     </div>

@@ -13,8 +13,6 @@ const html = renderSSR(
   />
 );
 
-console.log(html);
-
 Promise.all([
   Deno.writeFile("./site/cv/index.html", new TextEncoder().encode(html)),
   Deno.copyFile("./src/cv/cv.css", "./site/cv/cv.css"),

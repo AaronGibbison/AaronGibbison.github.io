@@ -13,6 +13,7 @@ type Page = {
 function Headers({ page: { title } }: { page: Page }): Component {
   return (
     <head>
+      <meta charSet="utf-8" />
       <title>{title}</title>
       <link rel="stylesheet" href="cv.css"/>
     </head>
@@ -24,6 +25,7 @@ function Body({ page: { careers, personal } }: { page: Page }): Component {
     <body>
       <div id="cv">
         <Personal personal={personal} />
+        <br />
         <Careers careers={careers}  />
       </div>
     </body>
