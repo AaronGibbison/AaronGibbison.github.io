@@ -1,10 +1,4 @@
-export type Personal = {
-  name: string;
-  email: string;
-  mobile: string;
-  linkedin: string;
-  github: string;
-};
+import {Personal} from "../../@types/cv.d.ts";
 
 export const personal: Personal = {
   name: "Aaron Gibbison",

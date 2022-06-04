@@ -1,6 +1,8 @@
-import { Personal, personal } from "./details/personal.ts";
-import { Career, ovo, softwire } from "./details/career.ts";
-import type { GeneratedPage } from "../@types/generatedPage.d.ts";
+import type { Career, Personal } from "../@types/cv.d.ts";
+
+import { personal } from "./details/personal.ts";
+import { softwire } from "./details/career-softwire.ts";
+import { ovo  } from "./details/career-ovo.ts";
 import { h, Component, Fragment } from "../deno.ts";
 
 function Personal({ personal }: { personal: Personal }): Component {
@@ -19,8 +21,6 @@ function Career(career: Career): Component {
     year: "numeric",
     month: "short",
   });
-
-  // const foo = <div>Hello World!</div>
 
   const projects = career.projects
     .sort((a, b) => a.priority - b.priority)
@@ -61,9 +61,12 @@ function Career(career: Career): Component {
   );
 }
 
-function Headers() {
+function Headers({title}: {title: string}) {
   return (
-    <link rel="stylesheet" href="cv.css"/>
+    <head>
+      <title>{title}</title>
+      <link rel="stylesheet" href="cv.css"/>
+    </head>
   )
 }
 
@@ -83,10 +86,11 @@ function Body() {
   )
 }
 
-export function generateCv(): GeneratedPage {
-  return {
-    title: "CV - Aaron Gibbison",
-    headers: <Headers />,
-    body: <Body />
-  };
+export function Cv() {
+  return (
+    <html lang="en-GB">
+      <Headers title="CV - Aaron Gibbison" />
+      <Body />
+    </html>
+  );
 }
