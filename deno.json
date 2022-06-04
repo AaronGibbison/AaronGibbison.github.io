@@ -10,9 +10,6 @@
       "deno.ns"
     ],
     "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment",
-    "paths": {
-      "_root": "src/*"
-    }
+    "jsxFragmentFactory": "Fragment"
   }
 }

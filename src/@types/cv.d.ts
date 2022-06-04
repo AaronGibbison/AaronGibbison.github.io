@@ -1,15 +1,17 @@
+export type Project = {
+  priority: number;
+  label: string;
+  skills: string[];
+  notables: string[];
+}
+
 export type Career = {
   company: string;
   title: string;
   description: string;
   start: Date;
   end?: Date;
-  projects: {
-    priority: number;
-    label: string;
-    skills: string[];
-    notables: string[];
-  }[];
+  projects: Project[];
 };
 
 export type Personal = {
