@@ -1,12 +1,13 @@
 import type { TPage } from "../../@types/thoughts.d.ts";
-import { Component, h } from "../../deno.ts";
+
+import { Component, Fragment, h } from "../../deno.ts";
 import { Page } from "../Components/Page.tsx";
 
-export function Homepage(page: TPage): Component {
+export function AdditionPrimeFactors(page: TPage): Component {
   return (
     <Page {...page}>
       <main>
-        <h1>Hello World!</h1>
+        <h1>{page.title}</h1>
       </main>
     </Page>
   );

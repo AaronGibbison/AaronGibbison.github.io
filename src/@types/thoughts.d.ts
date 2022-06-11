@@ -1,3 +1,11 @@
+import type { Component } from "../deno.ts";
+
 export type TPage = {
   title: string;
-}
+  Navigation: Component;
+};
+
+export type TNavigation = {
+  path: string;
+  title: string;
+};
