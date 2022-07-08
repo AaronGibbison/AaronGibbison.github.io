@@ -1,3 +1,8 @@
+export type PProject = {
+  title: string;
+  description: string;
+}
+
 export type Project = {
   priority: number;
   label: string;
