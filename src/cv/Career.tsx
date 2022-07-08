@@ -1,5 +1,5 @@
 import type { Career as TCareer, Project as TProject } from "../@types/cv.d.ts";
-import { h, Component, Fragment } from "../deno.ts";
+import { h, Component, Fragment } from "nano-jsx";
 
 export function Careers({ careers }: { careers: TCareer[] }): Component {
   const careersHtml: Component[] =

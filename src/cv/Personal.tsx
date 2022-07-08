@@ -1,5 +1,5 @@
 import type { Personal } from "../@types/cv.d.ts";
-import { h, Component } from "../deno.ts";
+import { h, Component } from "nano-jsx";
 
 export function Personal({ personal }: { personal: Personal }): Component {
   return (
@@ -11,4 +11,3 @@ export function Personal({ personal }: { personal: Personal }): Component {
     </div>
   );
 }
-

@@ -2,6 +2,7 @@
   "tasks": {
     "cv:build": "deno run --allow-write --allow-read src/scripts/build-site-cv.tsx"
   },
+  "importMap": "import_map.json",
   "compilerOptions": {
     "lib": [
       "dom",

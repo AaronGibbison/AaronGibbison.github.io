@@ -1,8 +1,9 @@
-import { h, Component } from "../deno.ts";
+import { h, Component } from "nano-jsx";
 import type { Career as TCareer, Personal as TPersonal } from "../@types/cv.d.ts";
 
 import { Personal } from "./Personal.tsx";
 import { Careers } from "./Career.tsx";
+import { PersonalProjects } from "./PersonalProjects.tsx";
 
 type Page = {
   title: string;

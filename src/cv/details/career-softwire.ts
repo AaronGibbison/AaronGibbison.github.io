@@ -1,4 +1,4 @@
-import {Career} from "../../@types/cv.d.ts";
+import { Career } from "../../@types/cv.d.ts";
 
 export const softwire: Career = {
   company: "Softwire",
