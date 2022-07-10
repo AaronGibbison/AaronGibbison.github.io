@@ -1,13 +1,9 @@
-import { renderSSR } from "../deno.ts";
-import { pages } from "../thoughts/pages.tsx";
+import { generateThoughtPages } from "../thoughts/pages.tsx";
+import { copyStatic, generatePage, savePage } from "./to-html.ts";
 
-const textEncoder = new TextEncoder();
-
-Promise.all([
-  Deno.copyFile("./src/thoughts/main.css", "./site/thoughts/main.css"),
-  ...pages
-    .map(({ page, ...props }) => ({ page: renderSSR(page), ...props }))
-    .map(({ page, path }) =>
-      Deno.writeFile(`./site/thoughts/${path}.html`, textEncoder.encode(page))
-    ),
-]);
+Promise.all(
+  generateThoughtPages()
+    .map(({ page, ...props }) => ({ page: generatePage(page), ...props }))
+    .map(({ page, path }) => savePage(`thoughts/${ path }`, page)),
+)
+  .then(() => copyStatic("thoughts"));

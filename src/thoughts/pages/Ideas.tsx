@@ -1,6 +1,6 @@
 import type { TPage } from "../../@types/thoughts.d.ts";
-import { Component, h } from "../../deno.ts";
-import { Page } from "../Components/Page.tsx";
+import { Component, h } from "nano-jsx";
+import { Page } from "../components/Page.tsx";
 
 type TIdea = {
   title: string;
@@ -53,12 +53,12 @@ export function Ideas(page: TPage): Component {
       ],
     },
   ]
-    .map((i) => <Idea idea={i} />);
+    .map((i) => <Idea idea={ i } />);
 
   return (
-    <Page {...page}>
+    <Page { ...page }>
       <main id="ideas" class="ideas">
-        {ideas}
+        { ideas }
       </main>
     </Page>
   );
@@ -66,10 +66,10 @@ export function Ideas(page: TPage): Component {
 
 function Idea({ idea: { title, notes } }: { idea: TIdea }): Component {
   return (
-    <div id={title} class="idea">
-      <h2>{title}</h2>
+    <div id={ title } class="idea">
+      <h2>{ title }</h2>
       <ul>
-        {notes.map((n) => <li>{n}</li>)}
+        { notes.map((n) => <li>{ n }</li>) }
       </ul>
     </div>
   );

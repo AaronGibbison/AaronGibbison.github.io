@@ -1,13 +1,12 @@
 import type { TPage } from "../../@types/thoughts.d.ts";
-
-import { Component, Fragment, h } from "../../deno.ts";
-import { Page } from "../Components/Page.tsx";
+import { Component, Fragment, h } from "nano-jsx";
+import { Page } from "../components/Page.tsx";
 
 export function CareerProgression(page: TPage): Component {
   return (
-    <Page {...page}>
+    <Page { ...page }>
       <main>
-        <h1>{page.title}</h1>
+        <h1>{ page.title }</h1>
       </main>
     </Page>
   );
