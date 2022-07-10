@@ -1,0 +1,35 @@
+body {
+  background: #dddddd;
+
+  display: grid;
+  grid-template-areas: ". body nav ." ". footer footer .";
+  grid-auto-columns: 1fr minmax(320px, 720px) 230px 1fr;
+  grid-row-gap: 0;
+}
+
+main, footer, nav {
+  background: white;
+  padding: 0 32px;
+}
+
+main {
+  grid-area: body;
+}
+
+footer {
+  grid-area: footer;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  grid-area: nav;
+}
+
+p {
+  text-align: justify;
+}
+
+.nav-link {
+  padding: 8px;
+}
