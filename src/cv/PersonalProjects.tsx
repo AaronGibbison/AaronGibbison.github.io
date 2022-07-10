@@ -3,7 +3,9 @@ import { PProject as TPProject } from "../@types/cv.d.ts";
 
 function Project({ project }: { project: TPProject }): Component {
   return (
-    <p id={project.title}> <b>{project.title}</b> - {project.description}</p>
+    <p id={ project.title }>
+      <b>{ project.title }</b>
+      - { project.description }</p>
   );
 }
 
@@ -14,7 +16,7 @@ export function PersonalProjects({ projects }: { projects: TPProject[] }): Compo
         Personal Projects
       </h2>
       <div id="projects">
-        { projects.map(project => <Project project={project} />) }
+        { projects.map(project => <Project project={ project } />) }
       </div>
     </>
   );
