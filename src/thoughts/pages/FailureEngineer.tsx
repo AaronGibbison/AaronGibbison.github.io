@@ -1,23 +1,23 @@
-import type { TPage } from "../../@types/thoughts.d.ts";
-import { Component, Fragment, h } from "nano-jsx";
-import { Page } from "../components/Page.tsx";
+import type { TPage } from '../../@types/thoughts.d.ts';
+import { Component, Fragment, h } from 'nano-jsx';
+import { Page } from '../components/Page.tsx';
 
 export function FailureEngineer(page: TPage): Component {
   return (
-    <Page { ...page }>
+    <Page {...page}>
       <main>
-        <h1>{ page.title }</h1>
+        <h1>{page.title}</h1>
         <p>Created: 2022-07-25</p>
         <p>Updated: 2022-07-26</p>
 
-        {/*<h2>Miss Management 2 - June 2022</h2>*/ }
-        {/*<p>*/ }
-        {/*  Tl;dr self Improvement: Communicate more. Better plan time.*/ }
-        {/*</p>*/ }
+        {/*<h2>Miss Management 2 - June 2022</h2>*/}
+        {/*<p>*/}
+        {/*  Tl;dr self Improvement: Communicate more. Better plan time.*/}
+        {/*</p>*/}
 
-        {/*<p>*/ }
-        {/*  */ }
-        {/*</p>*/ }
+        {/*<p>*/}
+        {/*  */}
+        {/*</p>*/}
 
         <h2>Poor Training - H2 2021</h2>
         <p>

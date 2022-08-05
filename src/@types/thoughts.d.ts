@@ -1,4 +1,4 @@
-import type { Component } from "nano-jsx";
+import type { Component } from 'nano-jsx';
 
 export type TPage = {
   title: string;

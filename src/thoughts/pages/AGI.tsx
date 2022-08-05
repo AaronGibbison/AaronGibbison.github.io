@@ -1,42 +1,42 @@
-import { Component, h } from "nano-jsx";
-import type { TPage } from "../../@types/thoughts.d.ts";
-import { Page } from "../components/Page.tsx";
+import { Component, h } from 'nano-jsx';
+import type { TPage } from '../../@types/thoughts.d.ts';
+import { Page } from '../components/Page.tsx';
 import {
   footnoteIndexer,
   Footnotes,
   TFootnote,
-} from "../components/Footnote.tsx";
+} from '../components/Footnote.tsx';
 
 export function AGI(page: TPage): Component {
   const footnoteArray = Object.values(footnotes);
   const FootnoteIndex = footnoteIndexer(footnoteArray);
 
   return (
-    <Page { ...page }>
+    <Page {...page}>
       <main>
-        <h1>{ page.title }</h1>
+        <h1>{page.title}</h1>
         <b>
           ### Incomplete. Needs proof reading, and look up recent AI
           developments - Below statements are likely incorrect
         </b>
 
         <div>
-          <h2 for={ "table-of-contents" }>Table of Contents</h2>
-          <ul id={ "table-of-contents" }>
+          <h2 for={'table-of-contents'}>Table of Contents</h2>
+          <ul id={'table-of-contents'}>
             <li>
-              <a href={ "#abstract" }>Introduction</a>
+              <a href={'#abstract'}>Introduction</a>
             </li>
             <li>
-              <a href={ "#emergent-behaviour" }>Emergent Behaviour</a>
+              <a href={'#emergent-behaviour'}>Emergent Behaviour</a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h2 id={ "abstract" }>Introduction</h2>
+          <h2 id={'abstract'}>Introduction</h2>
           <p>
             They are multiple ways to create an 'Artificial
-            Intelligence'<FootnoteIndex footnote={ footnotes["weakAi"] } />,
+            Intelligence'<FootnoteIndex footnote={footnotes['weakAi']}/>,
             however the construction of an AI will determine the capabilities of
             such as system. Modern AI largely (but not exclusively) uses a
             mixture of large data sets and Deep Neural Networks to achieve a
@@ -49,7 +49,7 @@ export function AGI(page: TPage): Component {
         </div>
 
         <div>
-          <h2 id={ "emergent-behaviour" }>Emergent Behaviour</h2>
+          <h2 id={'emergent-behaviour'}>Emergent Behaviour</h2>
           <p>
             Behaviour for a computer programme is often explicitly described.
             Emergent behaviour is the practice of writing a series of rules in
@@ -57,11 +57,11 @@ export function AGI(page: TPage): Component {
             allow for complex systems with a simple set of constructs.
           </p>
           <p>
-            A simple example of emergent behaviour is{ " " }
-            <a href={ "https://en.wikipedia.org/wiki/Boids" }>Boids</a>
+            A simple example of emergent behaviour is{' '}
+            <a href={'https://en.wikipedia.org/wiki/Boids'}>Boids</a>
             , which imitates a flock of birds without being explicit. The same
-            set of rules can be used to{ " " }
-            <a href={ "https://www.youtube.com/watch?v=bqtqltqcQhw" }>
+            set of rules can be used to{' '}
+            <a href={'https://www.youtube.com/watch?v=bqtqltqcQhw'}>
               simulate a fish colony
             </a>
             . A simple extension to the Boids' separation rule can allow them to
@@ -146,7 +146,7 @@ export function AGI(page: TPage): Component {
 
         <div>
           <h2>Notes</h2>
-          <Footnotes footnotes={ footnoteArray } />
+          <Footnotes footnotes={footnoteArray}/>
         </div>
       </main>
     </Page>
@@ -156,7 +156,7 @@ export function AGI(page: TPage): Component {
 const footnotes: { [key: string]: TFootnote } = {
   weakAi: {
     text:
-      "Artificial intelligence in this situation refers to 'weak' AI. The ability to achieve human like behaviour" +
-      " within a specific domain (e.g. chess).",
+      'Artificial intelligence in this situation refers to \'weak\' AI. The ability to achieve human like behaviour' +
+      ' within a specific domain (e.g. chess).',
   },
 };
