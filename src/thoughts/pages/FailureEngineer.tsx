@@ -8,16 +8,34 @@ export function FailureEngineer(page: TPage): Component {
       <main>
         <h1>{page.title}</h1>
         <p>Created: 2022-07-25</p>
-        <p>Updated: 2022-07-26</p>
+        <p>Updated: 2022-08-05</p>
 
-        {/*<h2>Miss Management 2 - June 2022</h2>*/}
-        {/*<p>*/}
-        {/*  Tl;dr self Improvement: Communicate more. Better plan time.*/}
-        {/*</p>*/}
+        <h2>Miss Management 2 - June 2022</h2>
+        <p>
+          Tl;dr self Improvement: Better information gathering. Communicate more. Better plan time.
+        </p>
 
-        {/*<p>*/}
-        {/*  */}
-        {/*</p>*/}
+        <p>
+          Deciding on the architecture took an extensive amount of time - if a meeting with UX was had instead, their
+          requirements could have been obtained earlier in the process. This would mean, when analysing different
+          technologies / systems, we could pick one which would better fit all the criteria. A delay of at least 2 weeks was
+          caused by this - enough to setup the testing framework to provide confidence that was severely lacking.
+        </p>
+
+        <p>
+          Gathering requirements from external stakeholder did not go well. In part, it was an internal problem - however, a
+          greater level of scrutinisation should have occurred. By getting out a thoroughly detailed requirement would have
+          reduced the initial bug rate. When slowly finding out requirements of the project, I did not share it well with the
+          other engineers.
+        </p>
+
+        <p>
+          Lastly, there were several times that my time may have been spent better. A week was spent creating detailed tests
+          for validation - this could have been left to QA to gather examples that should been tested. Then a set up which
+          can easily use new / different data would have made it easy for QA to add data to check. Similarly, I did not need
+          to do work setting up the infrastructure, and asked production engineering to do the work. Downside of taking such
+          a path is the lack of learning - not understanding Terraform or the architecture itself.
+        </p>
 
         <h2>Poor Training - H2 2021</h2>
         <p>
