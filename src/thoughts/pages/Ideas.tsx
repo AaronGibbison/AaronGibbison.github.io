@@ -1,13 +1,11 @@
-import type { TPage } from "../../@types/thoughts.d.ts";
-import { Component, h } from "nano-jsx";
-import { Page } from "../components/Page.tsx";
+import { h, Component, Fragment } from "nano-jsx";
 
 type TIdea = {
   title: string;
   notes: string[];
 };
 
-export function Ideas(page: TPage): Component {
+export function Ideas(): Component {
   const ideas = [
     {
       title: "Hypothesis for the basis of AGI",
@@ -55,13 +53,7 @@ export function Ideas(page: TPage): Component {
   ]
     .map((i) => <Idea idea={ i } />);
 
-  return (
-    <Page { ...page }>
-      <main id="ideas" class="ideas">
-        { ideas }
-      </main>
-    </Page>
-  );
+  return (<> { ideas } </>);
 }
 
 function Idea({ idea: { title, notes } }: { idea: TIdea }): Component {

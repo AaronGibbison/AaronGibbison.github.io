@@ -1,11 +1,13 @@
-import type { Component } from 'nano-jsx';
+import type { Component } from "nano-jsx";
 
-export type TPage = {
+export type TPage = Readonly<{
   title: string;
   Navigation: Component;
-};
+}>;
 
-export type TNavigation = {
+export type TNavigation = Readonly<{
   path: string;
   title: string;
-};
+}>;
+
+Deno.test

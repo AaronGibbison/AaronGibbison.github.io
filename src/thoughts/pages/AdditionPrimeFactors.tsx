@@ -1,13 +1,5 @@
-import type { TPage } from "../../@types/thoughts.d.ts";
-import { Component, Fragment, h } from "nano-jsx";
-import { Page } from "../components/Page.tsx";
+import { h, Component, Fragment } from "nano-jsx";
 
-export function AdditionPrimeFactors(page: TPage): Component {
-  return (
-    <Page { ...page }>
-      <main>
-        <h1>{ page.title }</h1>
-      </main>
-    </Page>
-  );
+export function AdditionPrimeFactors(): Component {
+  return (<></>);
 }

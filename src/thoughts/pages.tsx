@@ -4,65 +4,66 @@ import { Ideas } from "./pages/Ideas.tsx";
 import { AGI } from "./pages/AGI.tsx";
 import { FailureEngineer } from "./pages/FailureEngineer.tsx";
 import { Navigation } from "./components/Navigation.tsx";
-import type { TNavigation, TPage } from "../@types/thoughts.d.ts";
+import type { TNavigation } from "../@types/thoughts.d.ts";
 import { AdditionPrimeFactors } from "./pages/AdditionPrimeFactors.tsx";
 import { CareerProgression } from "./pages/CareerProgression.tsx";
 import { Nurbs } from "./pages/Nurbs.tsx";
 import { ProblemsMentalHealthAwareness } from "./pages/ProblemsMentalHealthAwareness.tsx";
 import { ProgrammingAxioms } from "./pages/ProgrammingAxioms.tsx";
+import { Page } from "./components/Page.tsx";
 
 export function generateThoughtPages() {
-  const rawPages: (TNavigation & { Page: (_: TPage) => Component })[] = [
+  const rawPages: (TNavigation & { pageContent: Component })[] = [
     {
       path: "index",
       title: "Homepage",
-      Page: Homepage,
+      pageContent: <Homepage />,
     },
-    { path: "ideas", title: "Ideas", Page: Ideas },
+    { path: "ideas", title: "Ideas", pageContent: Ideas },
     {
       path: "hypothesis-fundamental-agi",
       title:
         "~ Hypothesis for the fundamentals of an Artificial General Intelligence",
-      Page: AGI,
+      pageContent: <AGI />,
     },
     {
       path: "failure-engineer",
       title: "~ Failure as a Software Engineer",
-      Page: FailureEngineer,
+      pageContent: <FailureEngineer />,
     },
     {
       path: "addition-prime-factors",
       title: "~ Addition and Prime Factors",
-      Page: AdditionPrimeFactors,
+      pageContent: <AdditionPrimeFactors />,
     },
     {
       path: "career-progression",
       title: "~ Career Progression",
-      Page: CareerProgression,
+      pageContent: <CareerProgression />,
     },
     {
       path: "nurbs",
       title: "~ Nurbs",
-      Page: Nurbs,
+      pageContent: <Nurbs />,
     },
     {
       path: "mental-health",
       title: "~ Problems with Mental Health Awareness",
-      Page: ProblemsMentalHealthAwareness,
+      pageContent: <ProblemsMentalHealthAwareness />,
     },
     {
       path: "programming-axioms",
       title: "~ Axioms for Good Code",
-      Page: ProgrammingAxioms,
+      pageContent: <ProgrammingAxioms />,
     },
   ];
 
   const navigation = <Navigation pages={ rawPages } />;
 
   return rawPages.map((
-    { path, title, Page },
+    { path, title, pageContent },
   ) => ({
     path,
-    page: <Page title={ title } Navigation={ navigation } />,
+    page: <Page title={ title } Navigation={ navigation }>{ pageContent }</Page>,
   }));
 }
