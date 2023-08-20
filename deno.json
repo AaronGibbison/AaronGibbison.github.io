@@ -1,7 +1,9 @@
 {
   "tasks": {
-    "thoughts:build": "deno run --allow-write --allow-read src/scripts/build-site-thoughts.tsx"
+    "build:cv": "deno run --allow-write --allow-read src/scripts/build-site-cv.tsx",
+    "build:thoughts": "deno run --allow-write --allow-read src/scripts/build-site-thoughts.tsx"
   },
+  "importMap": "import_map.json",
   "compilerOptions": {
     "lib": [
       "dom",
@@ -11,6 +13,5 @@
     ],
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment"
-  },
-  "importMap": "import_map.json"
+  }
 }
