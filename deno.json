@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "build:cv": "deno run --allow-write --allow-read src/scripts/build-site-cv.tsx",
-    "build:thoughts": "deno run --allow-write --allow-read src/scripts/build-site-thoughts.tsx"
+    "build:cv": "deno run --allow-write --allow-read src/scripts/build-site-cv.ts",
+    "build:thoughts": "deno run --allow-write --allow-read src/scripts/build-site-thoughts.ts"
   },
   "importMap": "import_map.json",
   "compilerOptions": {

@@ -4,7 +4,7 @@ import { Ideas } from "./pages/Ideas.tsx";
 import { AGI } from "./pages/AGI.tsx";
 import { FailureEngineer } from "./pages/FailureEngineer.tsx";
 import { Navigation } from "./components/Navigation.tsx";
-import type { TNavigation } from "../@types/thoughts.d.ts";
+import type { TNavigation } from "../../types/thoughts.d.ts";
 import { AdditionPrimeFactors } from "./pages/AdditionPrimeFactors.tsx";
 import { CareerProgression } from "./pages/CareerProgression.tsx";
 import { Nurbs } from "./pages/Nurbs.tsx";
@@ -68,8 +68,10 @@ export function generateThoughtPages() {
 
   const navigation = <Navigation pages={rawPages} />;
 
-  return rawPages.map(({ path, title, pageContent }) => ({
-    path,
-    page: <Page title={title} Navigation={navigation}>{pageContent}</Page>,
-  }));
+  return rawPages.map(({ path, title, pageContent }) => (
+    {
+      path,
+      page: <Page title={title} Navigation={navigation}>{pageContent}</Page>,
+    }
+  ));
 }

@@ -1,11 +1,13 @@
-import { Career } from "../../@types/cv.d.ts";
+import { Career } from "../../../types/cv.d.ts";
 
 export const softwire: Career = {
   company: "Softwire",
   title: "Software Developer",
   description:
-    "Softwire is a digital agency and consultancy that delivers software projects for a range of clients, both public " +
-    "and private sector. Delivering robust systems, coordinating with the client to ensure the application meets their " +
+    "Softwire is a digital agency and consultancy that delivers software projects for a range of clients, both public "
+    +
+    "and private sector. Delivering robust systems, coordinating with the client to ensure the application meets their "
+    +
     "needs adding value.",
   start: new Date("2018-09-01"),
   end: new Date("2020-10-01"),
@@ -25,9 +27,11 @@ export const softwire: Career = {
       ],
       notables: [
         "Highly satisfied cliental increasing account value by 33%",
-        "80% (~£4 Million) cost reduction for BBC Monitoring team by designing and developing video transcription " +
+        "80% (~£4 Million) cost reduction for BBC Monitoring team by designing and developing video transcription "
+        +
         "scheduling",
-        "Worked across domain boundaries with the UX department gaining insight while sharing knowledge to improve " +
+        "Worked across domain boundaries with the UX department gaining insight while sharing knowledge to improve "
+        +
         "interoperability",
       ],
     },

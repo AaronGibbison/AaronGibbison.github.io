@@ -1,14 +1,14 @@
 export type PProject = {
   title: string;
   description: string;
-}
+};
 
 export type Project = {
   priority: number;
   label: string;
   skills: string[];
   notables: string[];
-}
+};
 
 export type Career = {
   company: string;
