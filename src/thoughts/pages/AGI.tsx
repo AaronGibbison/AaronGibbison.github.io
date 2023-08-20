@@ -1,4 +1,4 @@
-import { h, Component, Fragment } from "nano-jsx";
+import { Component, Fragment, h } from "nano-jsx";
 import {
   footnoteIndexer,
   Footnotes,
@@ -12,40 +12,40 @@ export function AGI(): Component {
   return (
     <>
       <b>
-        ### Incomplete. Needs proof reading, and look up recent AI
-        developments - Below statements are likely incorrect
+        ### Incomplete. Needs proof reading, and look up recent AI developments
+        - Below statements are likely incorrect
       </b>
 
       <div>
-        <h2 for={ "table-of-contents" }>Table of Contents</h2>
-        <ul id={ "table-of-contents" }>
+        <h2 for={"table-of-contents"}>Table of Contents</h2>
+        <ul id={"table-of-contents"}>
           <li>
-            <a href={ "#abstract" }>Introduction</a>
+            <a href={"#abstract"}>Introduction</a>
           </li>
           <li>
-            <a href={ "#emergent-behaviour" }>Emergent Behaviour</a>
+            <a href={"#emergent-behaviour"}>Emergent Behaviour</a>
           </li>
         </ul>
       </div>
 
       <div>
-        <h2 id={ "abstract" }>Introduction</h2>
+        <h2 id={"abstract"}>Introduction</h2>
         <p>
           They are multiple ways to create an 'Artificial
-          Intelligence'<FootnoteIndex footnote={ footnotes["weakAi"] } />,
-          however the construction of an AI will determine the capabilities of
-          such as system. Modern AI largely (but not exclusively) uses a
-          mixture of large data sets and Deep Neural Networks to achieve a
-          highly sophisticated AI with the assistance of Machine Learning
-          technics. There has been developments of how DNNs in regards to ML
-          methods and Neutral Net nodes. These are not the only methods, but
-          have a substantial influence in the current state of AI, e.g. part
-          of AlphaGo's learning was due to the use of adversarial networks.
+          Intelligence'<FootnoteIndex footnote={footnotes["weakAi"]} />, however
+          the construction of an AI will determine the capabilities of such as
+          system. Modern AI largely (but not exclusively) uses a mixture of
+          large data sets and Deep Neural Networks to achieve a highly
+          sophisticated AI with the assistance of Machine Learning technics.
+          There has been developments of how DNNs in regards to ML methods and
+          Neutral Net nodes. These are not the only methods, but have a
+          substantial influence in the current state of AI, e.g. part of
+          AlphaGo's learning was due to the use of adversarial networks.
         </p>
       </div>
 
       <div>
-        <h2 id={ "emergent-behaviour" }>Emergent Behaviour</h2>
+        <h2 id={"emergent-behaviour"}>Emergent Behaviour</h2>
         <p>
           Behaviour for a computer programme is often explicitly described.
           Emergent behaviour is the practice of writing a series of rules in
@@ -53,11 +53,11 @@ export function AGI(): Component {
           allow for complex systems with a simple set of constructs.
         </p>
         <p>
-          A simple example of emergent behaviour is{ " " }
-          <a href={ "https://en.wikipedia.org/wiki/Boids" }>Boids</a>
-          , which imitates a flock of birds without being explicit. The same
-          set of rules can be used to{ " " }
-          <a href={ "https://www.youtube.com/watch?v=bqtqltqcQhw" }>
+          A simple example of emergent behaviour is{" "}
+          <a href={"https://en.wikipedia.org/wiki/Boids"}>Boids</a>
+          , which imitates a flock of birds without being explicit. The same set
+          of rules can be used to{" "}
+          <a href={"https://www.youtube.com/watch?v=bqtqltqcQhw"}>
             simulate a fish colony
           </a>
           . A simple extension to the Boids' separation rule can allow them to
@@ -89,12 +89,11 @@ export function AGI(): Component {
         <h3>General Problems</h3>
         <p>
           Firstly, what will the Emergent AI looks like? The modal used is
-          important, otherwise difficulties will appear in developing the
-          rules which will allow for Emergent behaviour. Neural Networks could
-          be a good idea since they are meant to be based on real life. An
-          issue that could occur using NNs, modifying the dynamics may require
-          relearning everything again, severely hampering the AIs ability to
-          evolve.
+          important, otherwise difficulties will appear in developing the rules
+          which will allow for Emergent behaviour. Neural Networks could be a
+          good idea since they are meant to be based on real life. An issue that
+          could occur using NNs, modifying the dynamics may require relearning
+          everything again, severely hampering the AIs ability to evolve.
         </p>
 
         <h3>Temporal</h3>
@@ -108,13 +107,13 @@ export function AGI(): Component {
 
         <h3>Growth (Self Modification)</h3>
         <p>
-          As mentioned in the general problem section, construction is
-          important for relearning. Prevent uncontrolled growth is equally
-          important, due to the unnecessary increase in resource consumption
-          (energy and space). While it may not seem like a problem, it would
-          cripple training as only some computers can even train such an AI,
-          alongside all the additional parameters which increase training
-          time, such as for a Neural Network by n
+          As mentioned in the general problem section, construction is important
+          for relearning. Prevent uncontrolled growth is equally important, due
+          to the unnecessary increase in resource consumption (energy and
+          space). While it may not seem like a problem, it would cripple
+          training as only some computers can even train such an AI, alongside
+          all the additional parameters which increase training time, such as
+          for a Neural Network by n
           <sup>2</sup>
           .
         </p>
@@ -142,7 +141,7 @@ export function AGI(): Component {
 
       <div>
         <h2>Notes</h2>
-        <Footnotes footnotes={ footnoteArray } />
+        <Footnotes footnotes={footnoteArray} />
       </div>
     </>
   );

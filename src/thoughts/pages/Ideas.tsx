@@ -1,4 +1,4 @@
-import { h, Component, Fragment } from "nano-jsx";
+import { Component, Fragment, h } from "nano-jsx";
 
 type TIdea = {
   title: string;
@@ -51,17 +51,17 @@ export function Ideas(): Component {
       ],
     },
   ]
-    .map((i) => <Idea idea={ i } />);
+    .map((i) => <Idea idea={i} />);
 
-  return (<> { ideas } </>);
+  return <>{ideas}</>;
 }
 
 function Idea({ idea: { title, notes } }: { idea: TIdea }): Component {
   return (
-    <div id={ title } class="idea">
-      <h2>{ title }</h2>
+    <div id={title} class="idea">
+      <h2>{title}</h2>
       <ul>
-        { notes.map((n) => <li>{ n }</li>) }
+        {notes.map((n) => <li>{n}</li>)}
       </ul>
     </div>
   );

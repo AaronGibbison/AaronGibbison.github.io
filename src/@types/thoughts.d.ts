@@ -9,5 +9,3 @@ export type TNavigation = Readonly<{
   path: string;
   title: string;
 }>;
-
-Deno.test

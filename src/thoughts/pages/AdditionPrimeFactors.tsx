@@ -1,5 +1,5 @@
-import { h, Component, Fragment } from "nano-jsx";
+import { Component, Fragment, h } from "nano-jsx";
 
 export function AdditionPrimeFactors(): Component {
-  return (<></>);
+  return <></>;
 }
