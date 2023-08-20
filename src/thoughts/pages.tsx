@@ -8,9 +8,12 @@ import type { TNavigation } from "../@types/thoughts.d.ts";
 import { AdditionPrimeFactors } from "./pages/AdditionPrimeFactors.tsx";
 import { CareerProgression } from "./pages/CareerProgression.tsx";
 import { Nurbs } from "./pages/Nurbs.tsx";
-import { ProblemsMentalHealthAwareness } from "./pages/ProblemsMentalHealthAwareness.tsx";
+import {
+  ProblemsMentalHealthAwareness,
+} from "./pages/ProblemsMentalHealthAwareness.tsx";
 import { ProgrammingAxioms } from "./pages/ProgrammingAxioms.tsx";
 import { Page } from "./components/Page.tsx";
+import { ForEffectiveEngineering } from "./pages/ForEffectiveEngineering.tsx";
 
 export function generateThoughtPages() {
   const rawPages: (TNavigation & { pageContent: Component })[] = [
@@ -56,14 +59,17 @@ export function generateThoughtPages() {
       title: "~ Axioms for Good Code",
       pageContent: <ProgrammingAxioms />,
     },
+    {
+      path: "for-engineering-communication",
+      title: "~ For Effective Engineering",
+      pageContent: <ForEffectiveEngineering />,
+    },
   ];
 
-  const navigation = <Navigation pages={ rawPages } />;
+  const navigation = <Navigation pages={rawPages} />;
 
-  return rawPages.map((
-    { path, title, pageContent },
-  ) => ({
+  return rawPages.map(({ path, title, pageContent }) => ({
     path,
-    page: <Page title={ title } Navigation={ navigation }>{ pageContent }</Page>,
+    page: <Page title={title} Navigation={navigation}>{pageContent}</Page>,
   }));
 }
