@@ -4,8 +4,7 @@ export const ovo: Career = {
   company: "OVO",
   title: "Software Engineer",
   description:
-    "OVO is an Energy Retailer providing electricity and gas to households, focusing on green energy and "
-    +
+    "OVO is an Energy Retailer providing electricity and gas to households, focusing on green energy and " +
     "the climate.",
   start: new Date("2020-11-01"),
   projects: [

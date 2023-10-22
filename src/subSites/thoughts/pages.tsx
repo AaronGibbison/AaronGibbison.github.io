@@ -64,6 +64,16 @@ export function generateThoughtPages() {
       title: "~ For Effective Engineering",
       pageContent: <ForEffectiveEngineering />,
     },
+    {
+      path: "premature-abstruction-is-the-root-of-all-evil",
+      title: "Premature abstraction is the root of all evil",
+      pageContent: <></>,
+    },
+    {
+      path: "abstraction-wrappers-vs-framework",
+      title: "Abstractions: Wrappers vs Framework",
+      pageContent: <></>,
+    },
   ];
 
   const navigation = <Navigation pages={rawPages} />;

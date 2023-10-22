@@ -25,7 +25,10 @@ function Headers({ page: { title } }: { page: Page }): Component {
     <Helmet>
       <meta charSet="utf-8" />
       <title>{title}</title>
-      <link rel="stylesheet" href="./static/css.css" />
+      <link
+        rel="stylesheet"
+        href="./static/css.css"
+      />
     </Helmet>
   );
 }
@@ -54,7 +57,7 @@ function CV(page: Page): Component {
   );
 }
 
-export const CvPage = (
+export const CvPage: Component = (
   <CV
     title="CV - Aaron Gibbison"
     personal={personal}
