@@ -4,9 +4,14 @@ import type {
 } from "../../types/cv.d.ts";
 import { Component, Fragment, h } from "nano-jsx";
 
-export function Careers({ careers }: { careers: TCareer[] }): Component {
+export function Careers({ careers }: {
+  careers: TCareer[];
+}): Component {
   const careersHtml: Component[] = careers
-    .sort((a, b) => b.start.valueOf() - a.start.valueOf())
+    .sort((a, b) =>
+      b.careerProgression[0].start.valueOf() -
+      a.careerProgression[0].start.valueOf()
+    )
     .map((c) => <Career career={c} />);
 
   return (
@@ -16,45 +21,60 @@ export function Careers({ careers }: { careers: TCareer[] }): Component {
   );
 }
 
-function Career({ career }: { career: TCareer }): Component {
+function Career({ career }: {
+  career: TCareer;
+}): Component {
   const dateFormat = new Intl.DateTimeFormat(undefined, {
     year: "numeric",
     month: "short",
   });
 
-  const startDate = dateFormat.format(career.start);
-  const endDate = career.end ? dateFormat.format(career.end) : "Present";
-
-  const isSingleProject = career.projects.length === 1;
-
-  const projects = career.projects
-    .sort((a, b) => a.priority - b.priority)
-    .map((project) => (
-      <Project
-        isSingleProject={isSingleProject}
-        project={project}
-      />
-    ));
-
   return (
-    <div class="career" id={career.company}>
-      <div class="heading">
-        <h2 class="company">{career.company}</h2>
-        <p class="role">{career.title}</p>
-        <p class="date">{startDate} - {endDate}</p>
-      </div>
+    <div
+      class="career"
+      id={career.company}
+    >
+      <h2 class="company">{career.company}</h2>
       <p class="description">{career.description}</p>
-      <div class="projects">{projects}</div>
+      {career.careerProgression.map((cp) => (
+        <>
+          <div class="heading">
+            <p class="role">
+              <strong>{cp.title}</strong>
+            </p>
+            <p class="date">
+              <strong>
+                {dateFormat.format(cp.start)} -{" "}
+                {cp.end ? dateFormat.format(cp.end) : "Present"}
+              </strong>
+            </p>
+          </div>
+          <div class="projects">
+            {cp.projects.map((p) => (
+              <Project
+                isSingleProject={cp.projects.length === 1}
+                project={p}
+              />
+            ))}
+          </div>
+        </>
+      ))}
     </div>
   );
 }
 
-function Project({ isSingleProject, project }: {
+function Project({
+  isSingleProject,
+  project,
+}: {
   isSingleProject: boolean;
   project: TProject;
 }): Component {
   return (
-    <div class="project" id={project.label}>
+    <div
+      class="project"
+      id={project.label}
+    >
       <div class="header">
         {isSingleProject ? "" : (
           <>

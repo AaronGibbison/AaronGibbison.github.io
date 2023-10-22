@@ -10,13 +10,17 @@ export type Project = {
   notables: string[];
 };
 
-export type Career = {
-  company: string;
+type CareerProgression = {
   title: string;
-  description: string;
   start: Date;
   end?: Date;
   projects: Project[];
+};
+
+export type Career = {
+  company: string;
+  description: string;
+  careerProgression: [CareerProgression, ...CareerProgression[]];
 };
 
 export type Personal = {
