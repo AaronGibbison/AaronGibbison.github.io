@@ -5,9 +5,9 @@ export async function copyStatic(root: string) {
 
   await Deno.mkdir(`./site/${staticPath}`, { recursive: true });
 
-  for await (const dirEntry of Deno.readDir(`./src/${staticPath}`)) {
+  for await (const dirEntry of Deno.readDir(`./src/subSites/${staticPath}`)) {
     await Deno.copyFile(
-      `./src/${staticPath}/${dirEntry.name}`,
+      `./src/subSites/${staticPath}/${dirEntry.name}`,
       `./site/${staticPath}/${dirEntry.name}`,
     );
   }
