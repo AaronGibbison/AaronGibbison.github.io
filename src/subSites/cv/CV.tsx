@@ -41,8 +41,8 @@ function Body({ page: { careers, personal, projects } }: {
       <Personal personal={personal} />
       <br />
       <Careers careers={careers} />
-      <br />
-      <PersonalProjects projects={projects} />
+      {/*<br />*/}
+      {/*<PersonalProjects projects={projects} />*/}
     </div>
   );
 }

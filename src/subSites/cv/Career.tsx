@@ -4,6 +4,11 @@ import type {
 } from "../../types/cv.d.ts";
 import { Component, Fragment, h } from "nano-jsx";
 
+const dateFormat = new Intl.DateTimeFormat(undefined, {
+  year: "numeric",
+  month: "short",
+});
+
 export function Careers({ careers }: {
   careers: TCareer[];
 }): Component {
@@ -24,11 +29,6 @@ export function Careers({ careers }: {
 function Career({ career }: {
   career: TCareer;
 }): Component {
-  const dateFormat = new Intl.DateTimeFormat(undefined, {
-    year: "numeric",
-    month: "short",
-  });
-
   return (
     <div
       class="career"
@@ -36,16 +36,20 @@ function Career({ career }: {
     >
       <h2 class="company">{career.company}</h2>
       <p class="description">{career.description}</p>
-      {career.careerProgression.map((cp) => (
-        <>
+      {career.careerProgression.map((cp, index) => (
+        <div class="progression">
           <div class="heading">
             <p class="role">
               <strong>{cp.title}</strong>
             </p>
             <p class="date">
               <strong>
-                {dateFormat.format(cp.start)} -{" "}
-                {cp.end ? dateFormat.format(cp.end) : "Present"}
+                {dateFormat.format(cp.start)}
+                {cp.end
+                  ? ` - ${dateFormat.format(cp.end)}`
+                  : index === 0
+                  ? " - Present"
+                  : ""}
               </strong>
             </p>
           </div>
@@ -57,7 +61,7 @@ function Career({ career }: {
               />
             ))}
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
@@ -75,16 +79,19 @@ function Project({
       class="project"
       id={project.label}
     >
-      <div class="header">
-        {isSingleProject ? "" : (
-          <>
-            <h3 class="title">Project:</h3>
-            <h3>{project.label}</h3>
-          </>
-        )}
-        <h4 class="tech">Technology:</h4>
-        <h4>{project.skills.join(", ")}</h4>
-      </div>
+      {project.skills.length > 0
+        ? (
+          <div class="header">
+            {isSingleProject ? "" : (
+              <>
+                <h3 class="title">Project:</h3>
+                <h3>{project.label}</h3>
+              </>
+            )} <h4 class="tech">Technology:</h4>
+            <h4>{project.skills.join(", ")}</h4>
+          </div>
+        )
+        : null}
       <ul class="notables">
         {project.notables.map((n) => <li>{n}</li>)}
       </ul>

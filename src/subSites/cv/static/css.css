@@ -10,10 +10,11 @@ body {
 
   @media print {
     width: 680px;
+    border: 0;
   }
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, ul {
   margin: 0;
 }
 
@@ -32,7 +33,11 @@ h3, h4 {
   margin-bottom: 8px;
 }
 
-.career > .heading {
+.career > .progression {
+  margin: 12px 0;
+}
+
+.career > .progression > .heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,7 +47,7 @@ h3, h4 {
   display: grid;
   grid-template-columns: min-content auto;
 
-  margin-top: 8px
+  margin: 8px 0;
 }
 
 .project > .header > h3, .project > .header > h4 {

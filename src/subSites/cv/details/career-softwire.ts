@@ -51,15 +51,15 @@ export const softwire: Career = {
             "Increased application performance by 5x while reducing memory usage by 10%",
           ],
         },
-        {
-          label: "Air Charter Service (ACS)",
-          priority: 3,
-          skills: ["C# (.NET)", "SQL", "Javascript", "JQuery"],
-          notables: [
-            "Led improvement for handling legal information, reducing risk while simplifying reuse",
-            "Designed SQL migration schema of a globally distributed database",
-          ],
-        },
+        // {
+        //   label: "Air Charter Service (ACS)",
+        //   priority: 3,
+        //   skills: ["C# (.NET)", "SQL", "Javascript", "JQuery"],
+        //   notables: [
+        //     "Led improvement for handling legal information, reducing risk while simplifying reuse",
+        //     "Designed SQL migration schema of a globally distributed database",
+        //   ],
+        // },
       ],
     },
   ],
