@@ -3,15 +3,11 @@ import type {
   Career as TCareer,
   Personal as TPersonal,
   PProject as TPProject,
-} from "../../types/cv.d.ts";
-import { ovo } from "./details/career-ovo.ts";
-import { softwire } from "./details/career-softwire.ts";
-import { personal } from "./details/personal.ts";
-import { personalProjects } from "./details/projects.ts";
+} from "../../types/cv.d";
 
-import { Personal } from "./Personal.tsx";
-import { Careers } from "./Career.tsx";
-import { PersonalProjects } from "./PersonalProjects.tsx";
+import { Personal } from "./Personal";
+import { Careers } from "./Career";
+import { PersonalProjects } from "./PersonalProjects";
 
 type Page = {
   title: string;
@@ -23,12 +19,8 @@ type Page = {
 function Headers({ page: { title } }: { page: Page }): Component {
   return (
     <Helmet>
-      <meta charSet="utf-8" />
       <title>{title}</title>
-      <link
-        rel="stylesheet"
-        href="./static/css.css"
-      />
+      <link href={"static/css.css"} rel="stylesheet" />
     </Helmet>
   );
 }
@@ -41,14 +33,14 @@ function Body({ page: { careers, personal, projects } }: {
       <Personal personal={personal} />
       <br />
       <Careers careers={careers} />
-      {/*<br />*/}
-      {/*<PersonalProjects projects={projects} />*/}
+      <br />
+      <PersonalProjects projects={projects} />
     </div>
   );
 }
 
 // TODO: Add support to hide attributes
-function CV(page: Page): Component {
+export function CV(page: Page): Component {
   return (
     <>
       <Headers page={page} />
@@ -56,12 +48,3 @@ function CV(page: Page): Component {
     </>
   );
 }
-
-export const CvPage: Component = (
-  <CV
-    title="CV - Aaron Gibbison"
-    personal={personal}
-    careers={[ovo, softwire]}
-    projects={personalProjects}
-  />
-);

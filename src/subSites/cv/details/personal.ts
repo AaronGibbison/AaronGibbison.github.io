@@ -1,4 +1,4 @@
-import { Personal } from "../../../types/cv.d.ts";
+import { Personal } from "../../../types/cv.d";
 
 export const personal: Personal = {
   name: "Aaron Gibbison",

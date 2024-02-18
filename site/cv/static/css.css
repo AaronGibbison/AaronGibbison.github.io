@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  justify-content: center;
+
+  width: 720px;
+  padding: 16px;
+  border: 2px black solid;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media print {
+    width: 680px;
+    border: 0;
+  }
+}
+
+h1, h2, h3, h4, p, ul {
+  margin: 0;
+}
+
+h1, h2 {
+  font-size: 1.25rem;
+}
+
+h3, h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.description {}
+
+.personal {
+  margin-bottom: 8px;
+}
+
+.career > .progression {
+  margin: 12px 0;
+}
+
+.career > .progression > .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project > .header {
+  display: grid;
+  grid-template-columns: min-content auto;
+
+  margin: 8px 0;
+}
+
+.project > .header > h3, .project > .header > h4 {
+  margin-right: 32px;
+}
+
+.project > .notables {
+  padding-left: 20px;
+}

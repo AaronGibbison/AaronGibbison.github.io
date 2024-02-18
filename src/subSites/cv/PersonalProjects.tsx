@@ -1,5 +1,5 @@
 import { Component, Fragment, h } from "nano-jsx";
-import { PProject as TPProject } from "../../types/cv.d.ts";
+import { PProject as TPProject } from "../../types/cv.d";
 
 function Project({ project }: { project: TPProject }): Component {
   return (

@@ -1,4 +1,4 @@
-import type { Personal } from "../../types/cv.d.ts";
+import type { Personal } from "../../types/cv.d";
 import { Component, h } from "nano-jsx";
 
 export function Personal({ personal }: { personal: Personal }): Component {

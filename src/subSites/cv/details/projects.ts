@@ -1,4 +1,4 @@
-import { PProject } from "../../../types/cv.d.ts";
+import { PProject } from "../../../types/cv.d";
 
 export const personalProjects: PProject[] = [
   {

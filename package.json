@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build:cv": "pnpm exec esbuild --bundle --jsx=transform --jsx-factory=h --jsx-fragment=Fragment --external:fs ./src/subSites/cv/build.tsx | node -",
+    "build:thoughts": "pnpm exec esbuild --bundle --jsx=transform --jsx-factory=h --jsx-fragment=Fragment --external:fs ./src/subSites/thoughts/build.ts | node -"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.1",
+    "esbuild": "^0.19.8",
+    "nano-jsx": "^0.1.0"
+  }
+}

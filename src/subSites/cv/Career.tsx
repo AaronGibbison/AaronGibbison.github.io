@@ -1,7 +1,7 @@
 import type {
   Career as TCareer,
   Project as TProject,
-} from "../../types/cv.d.ts";
+} from "../../types/cv.d";
 import { Component, Fragment, h } from "nano-jsx";
 
 const dateFormat = new Intl.DateTimeFormat(undefined, {

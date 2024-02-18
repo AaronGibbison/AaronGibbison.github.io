@@ -1,5 +1,6 @@
-import { Component, Fragment, h } from "nano-jsx";
+import { Component, h } from "nano-jsx";
 
 export function Homepage(): Component {
-  return <>Hello World!</>;
+  return <p>Hello World!</p>;
 }
+
